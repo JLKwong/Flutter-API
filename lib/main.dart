@@ -26,13 +26,13 @@ class MyHomePage extends StatelessWidget {
           child: FutureBuilder<List<CatFacts>>(
             future: uiCall.catFactsCall(),
             builder: (context, snapshot) {
-              //return Text("${snapshot.data?[0].text}");
-              ListView.builder(
-                itemCount: catlist.length,
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text('${catlist[index]}'),
-                  );
+              return Text("${snapshot.data?[0].text}");
+              //ListView.builder(
+              //  itemCount: catlist.length,
+              //  itemBuilder: (context, index) {
+              //    return ListTile(
+              //      title: Text('${catlist[index]}'),
+              //    );
                 },
               )
             },
